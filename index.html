@@ -116,7 +116,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -146,6 +146,85 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://qxpblog.github.io/2022/03/27/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%A0%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="qxp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/03/27/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%A0%86/" class="post-title-link" itemprop="url">苹果分堆</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-03-27 09:35:37 / Modified: 10:28:12" itemprop="dateCreated datePublished" datetime="2022-03-27T09:35:37+08:00">2022-03-27</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <pre><code>问题:
+现在有 1023 个苹果，请你把它分成 10 堆，请给出一种分法，满足要求：当需要取得 0～1023 中任意数 目的苹果时，必须直接从这 10 堆苹果中直接取出几堆，使得取出几堆苹果的总数刚好满足要求。 例如：分为 9 堆（100 个）和 1 堆（123 个），现在需要 223 个苹果，则可以直接取两堆（100+123）。
+
+答案:
+1,2,4,8,16,32,64,128,256,512
+
+
+分析:
+不妨将要取出的苹果数目用二进制表示，取值范围是 00000000 00000001 ~ 00000011  11111111，那么将苹果分成10堆后，只需要其中二进制数上每一位上的数能够排列组合成00000000 00000001 ~ 00000011 11111111范围内任意数即可，即将苹果分成00000000 00000001，00000000 00000010，00000000 00000100，00000000 00001000，00000000 00010000，00000000 00100000，00000000 01000000，00000000 10000000，00000001 00000000，000000010 00000000，也就是1,2,4,8,16,32,64,128,256,512。
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
