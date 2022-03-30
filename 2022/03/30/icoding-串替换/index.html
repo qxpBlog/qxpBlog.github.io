@@ -20,25 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"qxpblog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="银鞍照白马，飒沓如流星">
-<meta property="og:type" content="website">
-<meta property="og:title" content="清风未曾染秋心の博客">
-<meta property="og:url" content="https://qxpblog.github.io/archives/2022/index.html">
+    <meta name="description" content="串替换 不调用库函数，自己实现字符串替换操作，函数原型为：    int str_replace(const char *in, char *out, int outlen, const char *oldstr, const char *newstr);参数说明: in， 原始字符串，保持不变out, 存放替换结果的字符串outlen，out空间的大小oldstr，要替换的旧字符串newstr，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="icoding 串替换">
+<meta property="og:url" content="https://qxpblog.github.io/2022/03/30/icoding-%E4%B8%B2%E6%9B%BF%E6%8D%A2/index.html">
 <meta property="og:site_name" content="清风未曾染秋心の博客">
-<meta property="og:description" content="银鞍照白马，飒沓如流星">
+<meta property="og:description" content="串替换 不调用库函数，自己实现字符串替换操作，函数原型为：    int str_replace(const char *in, char *out, int outlen, const char *oldstr, const char *newstr);参数说明: in， 原始字符串，保持不变out, 存放替换结果的字符串outlen，out空间的大小oldstr，要替换的旧字符串newstr，">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-30T12:40:40.000Z">
+<meta property="article:modified_time" content="2022-03-30T12:45:21.049Z">
 <meta property="article:author" content="qxp">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://qxpblog.github.io/archives/2022/">
+<link rel="canonical" href="https://qxpblog.github.io/2022/03/30/icoding-%E4%B8%B2%E6%9B%BF%E6%8D%A2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://qxpblog.github.io/2022/03/30/icoding-%E4%B8%B2%E6%9B%BF%E6%8D%A2/","path":"2022/03/30/icoding-串替换/","title":"icoding 串替换"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 清风未曾染秋心の博客</title>
+<title>icoding 串替换 | 清风未曾染秋心の博客</title>
   
 
 
@@ -68,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">清风未曾染秋心の博客</h1>
+      <p class="site-title">清风未曾染秋心の博客</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">记录生活的点点滴滴</p>
@@ -166,129 +168,92 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qxpblog.github.io/2022/03/30/icoding-%E4%B8%B2%E6%9B%BF%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="qxp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="清风未曾染秋心の博客">
+      <meta itemprop="description" content="银鞍照白马，飒沓如流星">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="icoding 串替换 | 清风未曾染秋心の博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          icoding 串替换
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-03-30 20:40:40 / 修改时间：20:45:21" itemprop="dateCreated datePublished" datetime="2022-03-30T20:40:40+08:00">2022-03-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>串替换</p>
+<p>不调用库函数，自己实现字符串替换操作，函数原型为：<br>    <code>int str_replace(const char *in, char *out, int outlen, const char *oldstr, const char *newstr);</code><br>参数说明:</p>
+<p>in， 原始字符串，保持不变<br>out, 存放替换结果的字符串<br>outlen，out空间的大小<br>oldstr，要替换的旧字符串<br>newstr，替换成的新字符串<br>函数返回成功替换的次数，即有多少个子串被成功替换<br>在替换过程中，任何情况下所得字符串（及结束符）不应该超过 outlen，如果某次替换所得字符串的长度超过 outlen，则不进行这次替换操作，整个替换操作结束。如：<br>原始串为 “aaabbbccc”，outlen 为14, oldstr 为 “c”，newstr 为 “333” 时，两次替换后得 “aaabbb333333c”，此时字符串占用空间为14字节。<br>如果再进行替换，则会超出 out 所占用的空间，所以停止替换操作。此时函数应该返回 2, out指向的串为 “aaabbb333333c”<br>再如：原始串为 “aaabbbccc”，outlen 为10, oldstr 为 “bb”，newstr 为 “123456”，进行替换后所得的串长度为14，与结束符一共占 15 个字节，超过outlen的10字节，此时不进行替换，函数应该返回 0。</p>
+<p>参考代码:<br>    <code>#include &quot;dsstring.h&quot;  #include &lt;stdio.h&gt;     #include &lt;stdlib.h&gt;      int get_len(const char* s)   &#123;     int i = 0;        while (s[i]) &#123;         i++;     &#125;     return i; &#125; int str_replace(const char* in, char* out, int outlen, const char* oldstr, const char* newstr) &#123;     int count_times = 0;     int i;     int j = 0;     int k;     int flag = 0;     outlen -= get_len(in);     int num = get_len(newstr) - get_len(oldstr);     for (i = 0;in[i] != 0; i++) &#123;         if (in[i] != oldstr[0]) &#123;             out[j] = in[i];             j++;             continue;         &#125; else &#123;             flag = 0;             for (k = 0; oldstr[k] != 0; k++) &#123;                 if (in[k + i] != oldstr[k]) &#123;                     break;                 &#125; else &#123;                     if (k == (get_len(oldstr) - 1)) &#123;                         if (outlen &gt; num) &#123;                             i += k;                             flag = 1;                         &#125;                     &#125;                 &#125;             &#125;             if (flag == 1) &#123;                 count_times++;                 for (k = 0; newstr[k] != 0; k++) &#123;                     out[j] = newstr[k];                     j++;                 &#125;                 outlen -= num;             &#125; else &#123;                 out[j] = in[i];                 j++;             &#125;         &#125;     &#125;     out[j] = 0;     return count_times; &#125;</code></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-30T20:40:40+08:00"
-              content="2022-03-30">
-          03-30
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/30/icoding-%E4%B8%B2%E6%9B%BF%E6%8D%A2/" itemprop="url">
-            <span itemprop="name">icoding 串替换</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/27/%E5%86%9C%E6%B0%91%E4%BC%AF%E4%BC%AF%E7%A7%8D%E8%8F%9C%E9%97%AE%E9%A2%98/" rel="prev" title="农民伯伯种菜问题">
+                  <i class="fa fa-chevron-left"></i> 农民伯伯种菜问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-27T12:27:54+08:00"
-              content="2022-03-27">
-          03-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/27/%E5%86%9C%E6%B0%91%E4%BC%AF%E4%BC%AF%E7%A7%8D%E8%8F%9C%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">农民伯伯种菜问题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-27T09:35:37+08:00"
-              content="2022-03-27">
-          03-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/27/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%A0%86/" itemprop="url">
-            <span itemprop="name">苹果分堆</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-26T19:43:17+08:00"
-              content="2022-03-26">
-          03-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/26/%E6%88%91%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" itemprop="url">
-            <span itemprop="name">我个人博客第一篇博客</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-18T17:02:19+08:00"
-              content="2022-03-18">
-          03-18
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/18/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 </div>
   </main>
