@@ -20,25 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"qxpblog.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="银鞍照白马，飒沓如流星">
-<meta property="og:type" content="website">
-<meta property="og:title" content="清风未曾染秋心の博客">
-<meta property="og:url" content="https://qxpblog.github.io/tags/%E6%8B%9B%E6%96%B0%E9%A2%98/index.html">
+    <meta name="description" content="C语言本身并不支持类似于Java或C++那种面向对象的语法，但是C语言其实可以实现面向对象，只不过相对而言比较麻烦。 C语言实现面向对象的三大特性 1.多态 无论是C89还是C99都是不支持函数重载的，但是可以换一种方式间接实现重载。 在定义一个需要考虑多态的类的方法的时候，考虑将该方法的接口作为公用，所有类都可以访问，但是将方法的具体实现作为参数传入该接口，也就是回调函数（recall func">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言如何实现面向对象编程">
+<meta property="og:url" content="https://qxpblog.github.io/2022/04/20/C%E8%AF%AD%E8%A8%80%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/index.html">
 <meta property="og:site_name" content="清风未曾染秋心の博客">
-<meta property="og:description" content="银鞍照白马，飒沓如流星">
+<meta property="og:description" content="C语言本身并不支持类似于Java或C++那种面向对象的语法，但是C语言其实可以实现面向对象，只不过相对而言比较麻烦。 C语言实现面向对象的三大特性 1.多态 无论是C89还是C99都是不支持函数重载的，但是可以换一种方式间接实现重载。 在定义一个需要考虑多态的类的方法的时候，考虑将该方法的接口作为公用，所有类都可以访问，但是将方法的具体实现作为参数传入该接口，也就是回调函数（recall func">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-04-20T06:40:54.000Z">
+<meta property="article:modified_time" content="2022-04-20T06:44:47.324Z">
 <meta property="article:author" content="qxp">
+<meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://qxpblog.github.io/tags/%E6%8B%9B%E6%96%B0%E9%A2%98/">
+<link rel="canonical" href="https://qxpblog.github.io/2022/04/20/C%E8%AF%AD%E8%A8%80%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/招新题/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://qxpblog.github.io/2022/04/20/C%E8%AF%AD%E8%A8%80%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/","path":"2022/04/20/C语言如何实现面向对象编程/","title":"C语言如何实现面向对象编程"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: 招新题 | 清风未曾染秋心の博客</title>
+<title>C语言如何实现面向对象编程 | 清风未曾染秋心の博客</title>
   
 
 
@@ -166,70 +169,131 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">招新题
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qxpblog.github.io/2022/04/20/C%E8%AF%AD%E8%A8%80%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="qxp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="清风未曾染秋心の博客">
+      <meta itemprop="description" content="银鞍照白马，飒沓如流星">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C语言如何实现面向对象编程 | 清风未曾染秋心の博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言如何实现面向对象编程
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-04-20 14:40:54 / 修改时间：14:44:47" itemprop="dateCreated datePublished" datetime="2022-04-20T14:40:54+08:00">2022-04-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>C语言本身并不支持类似于Java或C++那种面向对象的语法，但是C语言其实可以实现面向对象，只不过相对而言比较麻烦。</p>
+<p>C语言实现面向对象的三大特性</p>
+<p>1.多态</p>
+<p>无论是C89还是C99都是不支持函数重载的，但是可以换一种方式间接实现重载。</p>
+<p>在定义一个需要考虑多态的类的方法的时候，考虑将该方法的接口作为公用，所有类都可以访问，但是将方法的具体实现作为参数传入该接口，也就是回调函数（recall function）。下面是一段示例代码</p>
+<p>第一种方法：使用函数指针实现同名调用</p>
+<pre><code>struct ClassA &#123;
+
+    int member;
+
+    int (*method)(int);
+&#125;
+
+struct ClassB &#123;
+    float member;
+    float (*method)(float);
+&#125;
+
+// 考虑方法的访问限制，最好是把类定义在不同文件中，在不同
+
+// 类中分别实现方法，并用static实现访问限制
+
+static int ClassA_method(int);
+static float ClassB_method(float);
+int main(void) &#123;
+    ClassA a;
+    CLassB b;
+    a.method = &amp;ClassA_method; // 这一条赋值语句其实可以包装在构造函数中
+    b.method = &amp;ClassB_method;
+    printf(&quot;%d, %f\n&quot;, a.method(1), b.method(1.1));
+    return 0;
+&#125;
+static int ClassA_method(int a) &#123;return a;&#125;
+static float ClassB_method(float a) &#123;return a;&#125;
+</code></pre>
+<p>还有一种更为通用的实现多态的方法是将不同类对于同一个接口的实现作为参数，当作回调函数传给接口</p>
+<p>2.封装</p>
+<p>方法的实现由类定义完成，为其他模块提供标准接口。</p>
+<p>3.继承</p>
+<p>子类的定义可以包含一个父类成员变量。继承的方法可以通过将子类方法的函数指针成员变量指向父类方法的函数指针<br>    &#x2F;&#x2F; 通过访问父类成员变量来获取函数指针<br>    struct ClassA {<br>        int member;<br>        void (*method)(int);<br>    };<br>    struct ClassB {<br>        struct ClassA;<br>        float member;<br>    }<br>    &#x2F;&#x2F; 将方法打包在<br>    struct ClassA {<br>        int member;<br>        void *p<br>    };<br>    struct ClassB {<br>        struct ClassA;<br>        float member;<br>    }</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-27T12:27:54+08:00"
-              content="2022-03-27">
-          03-27
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/27/%E5%86%9C%E6%B0%91%E4%BC%AF%E4%BC%AF%E7%A7%8D%E8%8F%9C%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">农民伯伯种菜问题</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag"># C语言</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/12/Java%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" rel="prev" title="Java相关知识">
+                  <i class="fa fa-chevron-left"></i> Java相关知识
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-03-27T09:35:37+08:00"
-              content="2022-03-27">
-          03-27
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/27/%E8%8B%B9%E6%9E%9C%E5%88%86%E5%A0%86/" itemprop="url">
-            <span itemprop="name">苹果分堆</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-    </div>
-  </div>
-  
-  
-  
+
 
 </div>
   </main>
